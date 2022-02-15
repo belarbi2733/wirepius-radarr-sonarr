@@ -19,7 +19,7 @@ Give a ⭐ if this project helped you!
 
 ## 💻 Supported Architectures
 
-This project supports multiple architectures such as `x86-64`, `arm64` [Raspberry-Ubuntu](https://ubuntu.com/download/raspberry-pi) and `armhf`[Raspberry-Raspbian](https://www.raspberrypi.com/software/operating-systems/).
+This project supports multiple architectures such as `x86-64`, `arm64` [Raspberry-Ubuntu](https://ubuntu.com/download/raspberry-pi) and `armhf` [Raspberry-Raspbian](https://www.raspberrypi.com/software/operating-systems/).
 
 **The architectures supported by this project are:**
 
