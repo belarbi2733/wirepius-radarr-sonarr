@@ -17,19 +17,20 @@ Give a ⭐ if this project helped you!
 
 <a href="https://www.buymeacoffee.com/belarbima" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-orange.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
-## 🌉 WireHole
-WireHole is a combination of [WireGuard®](https://www.wireguard.com/), [Pi-Hole®](https://en.wikipedia.org/wiki/Pi-hole), [Unbound®](https://en.wikipedia.org/wiki/Unbound_(DNS_server)), and [Stubby®](https://dnsprivacy.org/dns_privacy_daemon_-_stubby/) for secure VPN and [DoT](https://en.wikipedia.org/wiki/DNS_over_TLS) (DNS over TLS) in a docker-compose project
-### 💻 Supported Architectures
+## 💻 Supported Architectures
 
 The Wireguard image supports multiple architectures such as `x86-64`, `arm64` and `armhf`. Linuxserver - who makes the wireguard image we use - utilises the docker manifest for multi-platform awareness. 
 
-**The architectures supported by this image are:**
+**The architectures supported by this project are:**
 
 | Architecture | Tag |
 | :----: | --- |
 | x86-64 | amd64-latest |
 | arm64 | arm64v8-latest |
 | armhf | arm32v7-latest |
+
+## 🌉 WireHole
+WireHole is a combination of [WireGuard®](https://www.wireguard.com/), [Pi-Hole®](https://en.wikipedia.org/wiki/Pi-hole), [Unbound®](https://en.wikipedia.org/wiki/Unbound_(DNS_server)), and [Stubby®](https://dnsprivacy.org/dns_privacy_daemon_-_stubby/) for secure VPN and [DoT](https://en.wikipedia.org/wiki/DNS_over_TLS) (DNS over TLS) in a docker-compose project
 
 ### 💪 Quickstart
 To get started all you need to do is clone the repository and spin up the containers.
