@@ -42,7 +42,7 @@ cd wirehole-radarr-sonarr/WireHole
 ```bash
 docker-compose up -d
 ```
-Within the output of the terminal will be QR codes you can (if you choose) to setup it WireGuard on your phone.
+Within the output of the terminal will be QR codes you can (if you choose) to setup it WireGuard on your phone, or you can found the configs file in : `wirehole-radarr-sonarr/WireHole/wireguard`
 ```bash
 wireguard    | **** Internal subnet is set to 10.6.0.0 ****
 wireguard    | **** Peer DNS servers will be set to 10.2.0.100 ****
