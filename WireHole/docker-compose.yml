@@ -18,6 +18,14 @@ services:
     networks:
       private_network:
         ipv4_address: 10.2.0.200
+  stubby:
+    image: "amine2733/stubby:arm64"
+    container_name: stubby
+    restart: unless-stopped
+    hostname: "stubby"
+    networks:
+      private_network:
+        ipv4_address: 10.2.0.201
 
   wireguard:
     depends_on: [unbound, pihole]
@@ -29,7 +37,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=America/Los_Angeles # Change to your timezone
+      - TZ=Europe/Brussels # Change to your timezone
       - SERVERPORT=51820
       #- SERVERURL=my.ddns.net #optional - For use with DDNS (Uncomment to use)
       - PEERS=10 # How many peers to generate for you (clients)
@@ -46,27 +54,26 @@ services:
       - 10.2.0.200 # Points to unbound
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
-
     restart: unless-stopped
     networks:
       private_network:
         ipv4_address: 10.2.0.3
 
   pihole:
-    depends_on: [unbound]
+    depends_on: [unbound, stubby]
     container_name: pihole
     image: pihole/pihole:latest
     restart: unless-stopped
     hostname: pihole
     dns:
-      - 127.0.0.1
       - 10.2.0.200 # Points to unbound
+      - 10.2.0.201:8053 # Points to stubby
     environment:
-      TZ: "America/Brussels"
+      TZ: "Europe/Brussels"
       WEBPASSWORD: "" # Blank password - Can be whatever you want.
       ServerIP: 10.1.0.100 # Internal IP of pihole
       DNS1: 10.2.0.200 # Unbound IP
-      DNS2: 10.2.0.200 # If we don't specify two, it will auto pick google.
+      DNS2: 10.2.0.201#8053 # Stubby IP.
     # Volumes store your data between container upgrades
     volumes:
       - "/volumes/docker/etc-pihole/:/etc/pihole/"
