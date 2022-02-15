@@ -13,8 +13,10 @@ services:
     container_name: unbound
     restart: unless-stopped
     hostname: "unbound"
+    environment:
+      - TZ=Europe/Brussels # Change to your timezone
     volumes:
-      - "/volumes/docker/unbound:/opt/unbound/etc/unbound/"
+      - "./unbound:/opt/unbound/etc/unbound/"
     networks:
       private_network:
         ipv4_address: 10.2.0.200
@@ -23,6 +25,8 @@ services:
     container_name: stubby
     restart: unless-stopped
     hostname: "stubby"
+    environment:
+      - TZ=Europe/Brussels # Change to your timezone
     networks:
       private_network:
         ipv4_address: 10.2.0.201
@@ -45,7 +49,7 @@ services:
       - INTERNAL_SUBNET=10.6.0.0
       
     volumes:
-      - /volumes/docker/wireguard:/config
+      - ./config:/config
       - /lib/modules:/lib/modules
     ports:
       - "51820:51820/udp"
@@ -76,8 +80,8 @@ services:
       DNS2: 10.2.0.201#8053 # Stubby IP.
     # Volumes store your data between container upgrades
     volumes:
-      - "/volumes/docker/etc-pihole/:/etc/pihole/"
-      - "/volumes/docker/etc-dnsmasq.d/:/etc/dnsmasq.d/"
+      - "./etc-pihole/:/etc/pihole/"
+      - ./etc-dnsmasq.d/:/etc/dnsmasq.d/"
     # Recommended but not required (DHCP needs NET_ADMIN)
     #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
     cap_add:
