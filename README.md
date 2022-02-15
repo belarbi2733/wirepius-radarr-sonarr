@@ -102,7 +102,7 @@ While connected to WireGuard, navigate to http://10.2.0.100/admin
 
 *The password (unless you set it in `docker-compose.yml`) is blank.*
 <p align="center">
-  <img src="images/pihole.png" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Pi-hole_Screenshot.png" />
 </p>
 
 
