@@ -1,80 +1,101 @@
 version: "3"
 
-networks:
-  private_network:
-    ipam:
-      driver: default
-      config:
-        - subnet: 10.2.0.0/24
-
 services:
-  unbound:
-    image: "mvance/unbound:latest"
-    container_name: unbound
+  rdtclient:
+    image: "rogerfar/rdtclient:latest"
+    container_name: rdtclient
     restart: unless-stopped
-    hostname: "unbound"
+    hostname: "rdtclient"
     volumes:
-      - "/volumes/docker/unbound:/opt/unbound/etc/unbound/"
+      - '/volumes/downloads/:/data/downloads'
+      - '/volumes/docker/rdtclient/:/data/db'
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
     networks:
       private_network:
-        ipv4_address: 10.2.0.200
-
-  wireguard:
-    depends_on: [unbound, pihole]
-    image: linuxserver/wireguard
-    container_name: wireguard
-    cap_add:
-      - NET_ADMIN
-      - SYS_MODULE
+        ipv4_address: 10.2.0.10
+  jackett:
+    image: "linuxserver/jackett:latest"
+    container_name: jackett
+    restart: unless-stopped
+    hostname: "jackett"
+    volumes:
+      - '/volumes/downloads/jackett:/data/downloads'
+      - '/volumes/docker/jackett/config:/config'
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=America/Los_Angeles # Change to your timezone
-      - SERVERPORT=51820
-      #- SERVERURL=my.ddns.net #optional - For use with DDNS (Uncomment to use)
-      - PEERS=10 # How many peers to generate for you (clients)
-      - PEERDNS=10.2.0.100 # Set it to point to pihole
-      - INTERNAL_SUBNET=10.6.0.0
-      
-    volumes:
-      - /volumes/docker/wireguard:/config
-      - /lib/modules:/lib/modules
-    ports:
-      - "51820:51820/udp"
-    dns:
-      - 10.2.0.100 # Points to pihole
-      - 10.2.0.200 # Points to unbound
-    sysctls:
-      - net.ipv4.conf.all.src_valid_mark=1
-
-    restart: unless-stopped
+      - TZ=Europe/Brussels
+      - AUTO_UPDATE=true #optional
     networks:
       private_network:
-        ipv4_address: 10.2.0.3
-
-  pihole:
-    depends_on: [unbound]
-    container_name: pihole
-    image: pihole/pihole:latest
+        ipv4_address: 10.2.0.11
+  flaresolverr:
+    image: "ghcr.io/flaresolverr/flaresolverr:latest"
+    container_name: flaresolverr
     restart: unless-stopped
-    hostname: pihole
-    dns:
-      - 127.0.0.1
-      - 10.2.0.200 # Points to unbound
+    hostname: "flaresolverr"
     environment:
-      TZ: "America/Brussels"
-      WEBPASSWORD: "" # Blank password - Can be whatever you want.
-      ServerIP: 10.1.0.100 # Internal IP of pihole
-      DNS1: 10.2.0.200 # Unbound IP
-      DNS2: 10.2.0.200 # If we don't specify two, it will auto pick google.
-    # Volumes store your data between container upgrades
-    volumes:
-      - "/volumes/docker/etc-pihole/:/etc/pihole/"
-      - "/volumes/docker/etc-dnsmasq.d/:/etc/dnsmasq.d/"
-    # Recommended but not required (DHCP needs NET_ADMIN)
-    #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
-    cap_add:
-      - NET_ADMIN
+      - LOG_LEVEL=info
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Brussels
     networks:
       private_network:
-        ipv4_address: 10.2.0.100
+        ipv4_address: 10.2.0.12
+  sonarr:
+    image: "linuxserver/sonarr:latest"
+    container_name: sonarr
+    restart: unless-stopped
+    hostname: "sonarr"
+    volumes:
+      - '/volumes/series:/tv'
+      - '/volumes/downloads:/downloads'
+      - '/volumes/docker/sonarr/config:/config'
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Brussels
+    networks:
+      private_network:
+        ipv4_address: 10.2.0.13
+  plex:
+    image: "linuxserver/plex:latest"
+    container_name: plex
+    restart: unless-stopped
+    hostname: "plex"
+    volumes:
+      - '/volumes/downloads/sonarr:/tv'
+      - '/volumes/downloads/radarr:/movies'
+      - '/volumes/docker/plex/config:/config'
+    environment:
+      #- PLEX_CLAIM=
+      - PUID=1000
+      - PGID=1000
+      - VERSION=docker
+      - TZ=Europe/Brussels
+    networks:
+      private_network:
+        ipv4_address: 10.2.0.14
+  radarr:
+    image: "linuxserver/radarr:latest"
+    container_name: radarr
+    restart: unless-stopped
+    hostname: "radarr"
+    volumes:
+      - '/volumes/movies:/movies'
+      - '/volumes/downloads:/downloads'
+      - '/volumes/docker/radarr/config:/config'
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Brussels
+    networks:
+      private_network:
+        ipv4_address: 10.2.0.15
+networks:
+      private_network:
+        external:
+          name: servicewireguard_private_network
