@@ -88,6 +88,23 @@ wireguard    | [cont-init.d] 99-custom-scripts: exited 0.
 wireguard    | [cont-init.d] done.
 wireguard    | [services.d] starting services
 ```
+---
+
+## Recommended configuration / Split tunnel:
+
+Modify your wireguard client `AllowedIps` to `10.2.0.0/24` to only tunnel the web panel and DNS traffic.
+
+---
+
+## Access PiHole
+
+While connected to WireGuard, navigate to http://10.2.0.100/admin
+
+*The password (unless you set it in `docker-compose.yml`) is blank.*
+<p align="center">
+  <img src="images/pihole.png" />
+</p>
+
 
 ## 🙏 Feedback
 
