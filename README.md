@@ -19,7 +19,7 @@ Give a ⭐ if this project helped you!
 
 ## 💻 Supported Architectures
 
-The Wireguard image supports multiple architectures such as `x86-64`, `arm64` and `armhf`. Linuxserver - who makes the wireguard image we use - utilises the docker manifest for multi-platform awareness. 
+This project supports multiple architectures such as `x86-64`, `arm64` [Raspberry-Ubuntu](https://ubuntu.com/download/raspberry-pi) and `armhf`[Raspberry-Raspbian](https://www.raspberrypi.com/software/operating-systems/).
 
 **The architectures supported by this project are:**
 
