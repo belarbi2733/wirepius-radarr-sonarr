@@ -21,7 +21,7 @@ services:
       private_network:
         ipv4_address: 10.2.0.200
   stubby:
-    image: "amine2733/stubby:arm64"
+    image: "amine2733/stubby:latest"
     container_name: stubby
     restart: unless-stopped
     hostname: "stubby"
