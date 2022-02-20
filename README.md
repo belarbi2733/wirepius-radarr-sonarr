@@ -2,9 +2,9 @@
 - **WireHoleS** is a combination of WireGuard, Pi-Hole, Unbound, and Stubby for secure VPN and DoT (DNS over TLS) in a docker-compose project
 - **RaSoPle** is a combination of Radarr, Sonarr, Lidarr, Jackett, flaresolverr, rdt-client, Plex in a one docker-compose project.
 
-- With the intent of enabling users to quickly and easily create and deploy a personally managed full or split-tunnel WireGuard VPN with ad blocking capabilities (via Pihole), first DNS caching with additional privacy options (via Unbound) and second DoT (DNS over TLS) within Stubby.
+With the intent of enabling users to quickly and easily create and deploy a personally managed full or split-tunnel WireGuard VPN with ad blocking capabilities (via Pihole), first DNS caching with additional privacy options (via Unbound) and second DoT (DNS over TLS) within Stubby.
 
-- You can have access to all your Series, Movies, Music, EBook over secure VPN. Note that all services are not publically exposed, the idea is to guarantee the privacy and security.
+You can have access to all your Series, Movies, Music, EBook over secure VPN. Note that all services are not publically exposed, the idea is to guarantee the privacy and security.
 ## 👤 Author
 * Twitter: [@belarbi2733](https://twitter.com/belarbi2733)
 * Github: [@belarbi2733](https://github.com/belarbi2733)
