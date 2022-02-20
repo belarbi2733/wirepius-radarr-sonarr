@@ -1,0 +1,81 @@
+#Sonarr Configuration
+sonarr:
+  server:
+    addr: 10.2.0.13
+    port : 8989 # Default is 8989
+    path: / # Default is / . If set, it must start and finish with / . Eg: /sonarr/
+    ssl: false #default false
+  auth:
+    apikey: 
+    username: 
+    password:
+  search: true
+  seasonFolder: true
+  qualityProfileId: 1
+  languageProfileId: 1
+  excludedRootFolders: # If set must not have a trailing slash Eg: /mnt/Media
+    - # First excluded folder, add others with a "-" on a new line (same indentation)
+
+#Radarr Configuration
+radarr:
+  server:
+    addr: 10.2.0.14
+    port : 7878 # Default is 7878
+    path: / # Default is / . If set, it must start and finish with / . Eg: /radarr/
+    ssl: false #default false
+  auth:
+    apikey:
+    username:
+    password: 
+  search: true
+  qualityProfileId: 1
+  minimumAvailability: announced
+  excludedRootFolders: # If set must not have a trailing slash Eg: /mnt/Media
+    - # First excluded folder, add others with a "-" on a new line (same indentation)
+
+#Telegram Configuration
+telegram:
+  token:
+  password:
+
+#Transmission Configuration
+#transmission:
+#  enable: true #enable the transmission commands
+#  onlyAdmin: true #transmission command  will only work for admins
+#  host: # IP-adres of the Transmission service
+#  authentication: true #is transmission protected with a password?
+#  username: 
+#  password:
+
+#sabnzbd:
+#  enable: true
+#  onlyAdmin: true
+#  server:
+#    addr:
+#    port: 8090 # Default is 8090
+#    path: / # Default is / . If set, it must start and finish with / . Eg: /sonarr/
+#    ssl: false #default false
+#  auth:
+#    apikey:
+#    username:
+#    password:
+
+# Optional settings:
+##Language
+language: en-us # en-us, es-es, it-it, nl-be, pt-pt
+
+##Entrypoints
+entrypointAuth: auth #auth or a custom entrypoint
+entrypointHelp: help #help entrypoint
+entrypointAdd: start #start or a custom entrypoint
+entrypointAllSeries: allSeries #allSeries or a custom entrypoint
+entrypointAllMovies: allMovies #allMovies or a custom entrypoint
+entrypointTransmission: transmission #transmission or a custom entrypoint
+entrypointSabnzbd: sabnzbd #sabnzbd or a custom entrypoint
+
+##Restrict some commands (Transmission) to only admins 
+enableAdmin: true
+
+##Logging
+logToConsole: true
+debugLogging: false
