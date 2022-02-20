@@ -7,8 +7,8 @@ services:
     restart: unless-stopped
     hostname: "rdtclient"
     volumes:
-      - '/volumes/downloads/:/data/downloads'
-      - '/volumes/docker/rdtclient/:/data/db'
+      - './rdtclient/downloads:/data/downloads'
+      - './rdtclient/config:/data/db'
     logging:
       driver: json-file
       options:
@@ -22,8 +22,8 @@ services:
     restart: unless-stopped
     hostname: "jackett"
     volumes:
-      - '/volumes/downloads/jackett:/data/downloads'
-      - '/volumes/docker/jackett/config:/config'
+      - './jackett/downloads:/data/downloads'
+      - './jackett/config:/config'
     environment:
       - PUID=1000
       - PGID=1000
@@ -51,9 +51,9 @@ services:
     restart: unless-stopped
     hostname: "sonarr"
     volumes:
-      - '/volumes/series:/tv'
-      - '/volumes/downloads:/downloads'
-      - '/volumes/docker/sonarr/config:/config'
+      - './sonarr/series:/tv'
+      - './sonarr/downloads:/downloads'
+      - './sonarr/config:/config'
     environment:
       - PUID=1000
       - PGID=1000
@@ -67,9 +67,9 @@ services:
     restart: unless-stopped
     hostname: "plex"
     volumes:
-      - '/volumes/downloads/sonarr:/tv'
-      - '/volumes/downloads/radarr:/movies'
-      - '/volumes/docker/plex/config:/config'
+      - './sonarr:/tv'
+      - './radarr:/movies'
+      - './plex/config:/config'
     environment:
       #- PLEX_CLAIM=
       - PUID=1000
@@ -85,9 +85,9 @@ services:
     restart: unless-stopped
     hostname: "radarr"
     volumes:
-      - '/volumes/movies:/movies'
-      - '/volumes/downloads:/downloads'
-      - '/volumes/docker/radarr/config:/config'
+      - './radarr/movies:/movies'
+      - './radarr/downloads:/downloads'
+      - './radarr/config:/config'
     environment:
       - PUID=1000
       - PGID=1000
