@@ -31,7 +31,7 @@ To use all services include Telegram Bot
 ```bash
 docker-compose up -d
 ```
-To use all services include without Telegram Bot 
+To use all services without Telegram Bot 
 ```bash
 docker-compose -f docker-compose-no-bot.yml up -d
 ```
