@@ -18,6 +18,7 @@ All the images supports multiple architectures such as `x86-64`, `arm64` and `ar
 ### 🏗 Pre-Work
 - You need to start WireHoleS before running **RaSoPle**
 - Connect to **Wireguard**
+- You need to create a Telegram Bot before, if you don't want use telegram Bot, use docker-compose-no-bot.yml instead of docker-compose.yml
 ### 💪 Quickstart
 To get started all you need to do is clone the repository and spin up the containers.
 ```bash
@@ -26,9 +27,16 @@ git clone https://github.com/belarbi2733/wirehole-radarr-sonarr
 ```bash
 cd wirehole-radarr-sonarr/RaSoPle
 ```
+To use all services include Telegram Bot 
 ```bash
 docker-compose up -d
 ```
+To use all services include without Telegram Bot 
+```bash
+docker-compose -f docker-compose-no-bot.yml up -d
+```
 ### 🔧 Configuration
+- **Addarr**
+
 - **Jackett**
 

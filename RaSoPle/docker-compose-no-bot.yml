@@ -1,0 +1,117 @@
+version: "3"
+
+services:
+  rdtclient:
+    image: "rogerfar/rdtclient:latest"
+    container_name: rdtclient
+    restart: unless-stopped
+    hostname: "rdtclient"
+    volumes:
+      - './rdtclient/downloads:/data/downloads'
+      - './rdtclient/config:/data/db'
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+    networks:
+      private_network:
+        ipv4_address: 10.2.0.10
+  jackett:
+    image: "linuxserver/jackett:latest"
+    container_name: jackett
+    restart: unless-stopped
+    hostname: "jackett"
+    volumes:
+      - './jackett/downloads:/data/downloads'
+      - './jackett/config:/config'
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Brussels
+      - AUTO_UPDATE=true #optional
+    networks:
+      private_network:
+        ipv4_address: 10.2.0.11
+  flaresolverr:
+    image: "ghcr.io/flaresolverr/flaresolverr:latest"
+    container_name: flaresolverr
+    restart: unless-stopped
+    hostname: "flaresolverr"
+    environment:
+      - LOG_LEVEL=info
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Brussels
+    networks:
+      private_network:
+        ipv4_address: 10.2.0.12
+  sonarr:
+    image: "linuxserver/sonarr:latest"
+    container_name: sonarr
+    restart: unless-stopped
+    hostname: "sonarr"
+    volumes:
+      - './sonarr/series:/tv'
+      - './sonarr/downloads:/downloads'
+      - './sonarr/config:/config'
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Brussels
+    networks:
+      private_network:
+        ipv4_address: 10.2.0.13
+  radarr:
+    image: "linuxserver/radarr:latest" #use always the latest image
+    container_name: radarr
+    restart: unless-stopped
+    hostname: "radarr"
+    volumes:
+      - './radarr/movies:/movies'
+      - './radarr/downloads:/downloads'
+      - './radarr/config:/config'
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Brussels
+    networks:
+      private_network:
+        ipv4_address: 10.2.0.14
+    plex:
+      image: "linuxserver/plex:latest"
+      container_name: plex
+      restart: unless-stopped
+      hostname: "plex"
+      volumes:
+        - './sonarr:/tv'
+        - './radarr:/movies'
+        - './plex/config:/config'
+      environment:
+        #- PLEX_CLAIM=
+        - PUID=1000
+        - PGID=1000
+        - VERSION=docker
+        - TZ=Europe/Brussels
+      networks:
+        private_network:
+          ipv4_address: 10.2.0.15
+    addarr: # Telegram Bot to add movies series directly to sonnar/radarr
+      image: "waterboy1602/addarr"
+      container_name: addarr
+      restart: unless-stopped
+      hostname: "addarr"
+      volumes:
+        - ./addarr/config.yaml:/app/config.yaml:ro
+        - ./addarr/chatid.txt:/app/chatid.txt:rw
+        - ./addarr/admin.txt:/app/admin.txt:ro
+      environment:
+        - PUID=1000
+        - PGID=1000
+        - TZ=Europe/Brussels
+      networks:
+        private_network:
+          ipv4_address: 10.2.0.16
+networks:
+      private_network:
+        external:
+          name: servicewireguard_private_network
