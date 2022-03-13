@@ -35,8 +35,17 @@ To use all services without Telegram Bot
 ```bash
 docker-compose -f docker-compose-no-bot.yml up -d
 ```
-### 🔧 Configuration
-- **Addarr**
 
+
+### 🔧 Configuration
+- **RealDebrid Client**
+1. Browse to [http://10.2.0.10:6500](http://10.2.0.10:6500) (or the path of your server).
+2. The first credentials you enter need to be remembered for future logins.
+2. Click on `Settings` on the top and enter your Real-Debrid API key (found here: [https://real-debrid.com/apitoken](https://real-debrid.com/apitoken).
+3. If you are using docker then the `Download path` setting needs to be the same as in your docker file mapping. By default this is `/data/downloads`. If you are using Windows, this is a path on your host.
+4. Same goes for `Mapped path`, but this is the destination path from your docker mapping. This is a path on your host. For Windows, this will most likely be the same as the `Download path`.
+5. Save your settings.
 - **Jackett**
+
+- **Addarr**
 
