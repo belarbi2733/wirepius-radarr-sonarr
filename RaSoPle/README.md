@@ -70,6 +70,11 @@ docker-compose -f docker-compose-no-bot.yml up -d
 
 - **Sonarr**
 1. Browse to [http://10.2.0.13:8989](http://10.2.0.13:8989).
+2. Go To Settings, click on Indexer, click on (+) Add, choose Torznab
+3. Fill as shown 
+<p align="center">
+  <img width="50%" src="../images/sonarr.png" />
+</p>
 - **Radarr**
 1. Browse to [http://10.2.0.14:7878](http://10.2.0.14:7878).
 2. Go To Settings, click on Indexer, click on (+) Add, choose Torznab
