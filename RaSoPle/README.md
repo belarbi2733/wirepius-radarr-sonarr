@@ -18,7 +18,7 @@ All the images supports multiple architectures such as `x86-64`, `arm64` and `ar
 ### 🏗 Pre-Work
 - You need to start **WireHoleS** before running **RaSoPle**
 - Connect to **Wireguard**
-- You need to create a Telegram Bot before, if you don't want use telegram Bot, use docker-compose-no-bot.yml instead of docker-compose.yml
+- You need to create a Telegram Bot before, if you don't want use telegram Bot, use `docker-compose-no-bot.yml` instead of `docker-compose.yml`
 ### 💪 Quickstart
 To get started all you need to do is clone the repository and spin up the containers.
 ```bash
@@ -39,13 +39,26 @@ docker-compose -f docker-compose-no-bot.yml up -d
 
 ### 🔧 Configuration
 - **RealDebrid Client**
-1. Browse to [http://10.2.0.10:6500](http://10.2.0.10:6500) (or the path of your server).
+1. Browse to [http://10.2.0.10:6500](http://10.2.0.10:6500).
 2. The first credentials you enter need to be remembered for future logins.
 2. Click on `Settings` on the top and enter your Real-Debrid API key (found here: [https://real-debrid.com/apitoken](https://real-debrid.com/apitoken).
 3. If you are using docker then the `Download path` setting needs to be the same as in your docker file mapping. By default this is `/data/downloads`.
 4. Same goes for `Mapped path`, but this is the destination path from your docker mapping. This is a path on your host.
 5. Save your settings.
 - **Jackett**
+1. Browse to [http://10.2.0.11:9117](http://10.2.0.11:9117).
+2. Scroll down and add in section FlareSolverr API URL: [http://10.2.0.12:8191](http://10.2.0.12:8191) as shown :
+<p align="center">
+  <img src="../images/FlareSolverr.png" />
+</p>
 
+3. Apply changes by clicking on Apply server settings. You don't need to set a password as the service run over `wireguard` .
+4. You can add Indexer for example : `YGGtorrent`
+- **Sonarr**
+1. Browse to [http://10.2.0.13:8989](http://10.2.0.13:8989).
+- **Radarr**
+1. Browse to [http://10.2.0.14:7878](http://10.2.0.14:7878).
+- **Plex**
+1. Browse to [http://10.2.0.15:32400](http://10.2.0.14:32400).
 - **Addarr**
 
