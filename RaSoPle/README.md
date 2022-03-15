@@ -57,6 +57,7 @@ docker-compose -f docker-compose-no-bot.yml up -d
 <p align="center">
   <img src="../images/Jackett.png" />
 </p>
+
 - **Sonarr**
 1. Browse to [http://10.2.0.13:8989](http://10.2.0.13:8989).
 - **Radarr**
