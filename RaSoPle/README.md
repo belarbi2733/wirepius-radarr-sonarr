@@ -54,6 +54,9 @@ docker-compose -f docker-compose-no-bot.yml up -d
 
 3. Apply changes by clicking on Apply server settings. You don't need to set a password as the service run over `wireguard` .
 4. You can add Indexer for example : `YGGtorrent`
+<p align="center">
+  <img src="../images/Jackett.png" />
+</p>
 - **Sonarr**
 1. Browse to [http://10.2.0.13:8989](http://10.2.0.13:8989).
 - **Radarr**
