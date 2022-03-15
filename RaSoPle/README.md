@@ -52,11 +52,16 @@ docker-compose -f docker-compose-no-bot.yml up -d
   <img width="50%" src="../images/FlareSolverr.png" />
 </p>
 
-3. Apply changes by clicking on Apply server settings. You don't need to set a password as the service run over `wireguard` .
-4. You can add Indexer for example : `YGGtorrent`
+3. Add in section `Blackhole directory` this is `/data/downloads` and apply changes by clicking on Apply server settings. You don't need to set a password as the service run over `wireguard` .
 <p align="center">
   <img width="50%" src="../images/Jackett.png" />
 </p>
+
+4. You can add Indexer for example : `YGGtorrent`, to do this click on Add indexer->Search: YGGtorrent ->Configure->add user and password->save.
+<p align="center">
+  <img width="50%" src="../images/Jackett_Index.png" />
+</p>
+
 
 - **Sonarr**
 1. Browse to [http://10.2.0.13:8989](http://10.2.0.13:8989).
