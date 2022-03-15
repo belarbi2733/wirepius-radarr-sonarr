@@ -67,6 +67,7 @@ docker-compose -f docker-compose-no-bot.yml up -d
   <img width="50%" src="../images/api.png" />
 </p>
 
+5. Click test then save.
 
 - **Sonarr**
 1. Browse to [http://10.2.0.13:8989](http://10.2.0.13:8989).
@@ -81,6 +82,7 @@ docker-compose -f docker-compose-no-bot.yml up -d
   <img width="50%" src="../images/rdclient.png" />
 </p>
 
+5. Click test then save.
 
 - **Radarr**
 1. Browse to [http://10.2.0.14:7878](http://10.2.0.14:7878).
