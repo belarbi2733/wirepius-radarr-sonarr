@@ -62,7 +62,7 @@ docker-compose -f docker-compose-no-bot.yml up -d
   <img width="50%" src="../images/Jackett_Index.png" />
 </p>
 
-5. You will need the API key of `Jackett`and to `copy the Torznab Feed`to used them in the next sections (**Sonarr** and **Radarr**)
+5. You will need the API key of `Jackett`and to `copy the Torznab Feed`to used them in the next sections (**Sonarr** and **Radarr**).
 <p align="center">
   <img width="50%" src="../images/api.png" />
 </p>
@@ -70,21 +70,30 @@ docker-compose -f docker-compose-no-bot.yml up -d
 
 - **Sonarr**
 1. Browse to [http://10.2.0.13:8989](http://10.2.0.13:8989).
-2. Go To Settings, click on Indexer, click on (+) Add, choose Torznab
-3. Fill as shown 
+2. Go To Settings, click on Indexer, click on (+) Add, choose `Torznab`.
 <p align="center">
   <img width="50%" src="../images/sonarr.png" />
 </p>
 
+3. Click test then save.
+4. Go To Settings, click on Dowload Clients, click on (+) Add, choose `qBittorrent`
+<p align="center">
+  <img width="50%" src="../images/rdclient.png" />
+</p>
+
+
 - **Radarr**
 1. Browse to [http://10.2.0.14:7878](http://10.2.0.14:7878).
-2. Go To Settings, click on Indexer, click on (+) Add, choose Torznab
-3. Fill as shown 
+2. Go To Settings, click on Indexer, click on (+) Add, choose `Torznab`.
 <p align="center">
   <img width="50%" src="../images/radarr.png" />
 </p>
 
-4. Click test then save
+3. Click test then save.
+4. Go To Settings, click on Dowload Clients, click on (+) Add, choose `qBittorrent`.
+<p align="center">
+  <img width="50%" src="../images/rdclient.png" />
+</p>
 
 - **Plex**
 1. Browse to [http://10.2.0.15:32400](http://10.2.0.14:32400).
