@@ -62,11 +62,18 @@ docker-compose -f docker-compose-no-bot.yml up -d
   <img width="50%" src="../images/Jackett_Index.png" />
 </p>
 
+5. You will need the API key of `Jackett`and to `copy the Torznab Feed`to used them in the next sections (**Sonarr** and **Radarr**)
+<p align="center">
+  <img width="50%" src="../images/api.png" />
+</p>
+
 
 - **Sonarr**
 1. Browse to [http://10.2.0.13:8989](http://10.2.0.13:8989).
 - **Radarr**
 1. Browse to [http://10.2.0.14:7878](http://10.2.0.14:7878).
+2. Go To Settings, click on Indexer, click on (+) Add, choose Torznab
+3. 
 - **Plex**
 1. Browse to [http://10.2.0.15:32400](http://10.2.0.14:32400).
 - **Addarr**
