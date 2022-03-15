@@ -48,12 +48,15 @@ docker-compose -f docker-compose-no-bot.yml up -d
 - **Jackett**
 1. Browse to [http://10.2.0.11:9117](http://10.2.0.11:9117).
 2. Scroll down and add in section FlareSolverr API URL: [http://10.2.0.12:8191](http://10.2.0.12:8191) as shown :
+<p align="center">
   <img width="50%" src="../images/FlareSolverr.png" />
+</p>
 
 3. Apply changes by clicking on Apply server settings. You don't need to set a password as the service run over `wireguard` .
 4. You can add Indexer for example : `YGGtorrent`
+<p align="center">
   <img width="50%" src="../images/Jackett.png" />
-
+</p>
 
 - **Sonarr**
 1. Browse to [http://10.2.0.13:8989](http://10.2.0.13:8989).
