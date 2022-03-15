@@ -73,7 +73,13 @@ docker-compose -f docker-compose-no-bot.yml up -d
 - **Radarr**
 1. Browse to [http://10.2.0.14:7878](http://10.2.0.14:7878).
 2. Go To Settings, click on Indexer, click on (+) Add, choose Torznab
-3. 
+3. Fill as shown 
+<p align="center">
+  <img width="50%" src="../images/radarr.png" />
+</p>
+
+4. Click test then save
+
 - **Plex**
 1. Browse to [http://10.2.0.15:32400](http://10.2.0.14:32400).
 - **Addarr**
