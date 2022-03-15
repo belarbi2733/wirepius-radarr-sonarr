@@ -96,6 +96,13 @@ docker-compose -f docker-compose-no-bot.yml up -d
 </p>
 
 - **Plex**
-1. Browse to [http://10.2.0.15:32400](http://10.2.0.14:32400).
+1. Browse to [http://10.2.0.15:32400/web](http://10.2.0.14:32400/web).
 - **Addarr**
 
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/belarbi2733/wirehole-radarr-sonarr/issues).
+
+## 🙏 Feedback
+
+If you have any feedback, please reach out to us at tking031@posteo.net
