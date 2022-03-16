@@ -22,15 +22,15 @@ This project supports multiple architectures such as `x86-64`, `arm64` [Raspberr
 ### 💪 Quickstart
 To get started all you need to do is clone the repository and spin up the containers.
 ```bash
-git clone https://github.com/belarbi2733/wirehole-radarr-sonarr
+git clone https://github.com/belarbi2733/wirepius-radarr-sonarr
 ```
 ```bash
-cd wirehole-radarr-sonarr/WirePiUS
+cd wirepius-radarr-sonarr/WirePiUS
 ```
 ```bash
 docker-compose up -d
 ```
-Within the output of the terminal will be QR codes you can (if you choose) to setup it WireGuard on your phone, or you can found the configs file in : `wirehole-radarr-sonarr/WireHole/wireguard`
+Within the output of the terminal will be QR codes you can (if you choose) to setup it WireGuard on your phone, or you can found the configs file in : `wirepius-radarr-sonarr/WireHole/wireguard`
 ```bash
 wireguard    | **** Internal subnet is set to 10.6.0.0 ****
 wireguard    | **** Peer DNS servers will be set to 10.2.0.100 ****
@@ -90,6 +90,6 @@ While connected to WireGuard, navigate to http://10.2.0.100/admin
 
 *The password (unless you set it in `docker-compose.yml`) is blank.*
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Pi-hole_Screenshot.png" />
+  <img src="../assets/pihole.png" />
 </p>
 

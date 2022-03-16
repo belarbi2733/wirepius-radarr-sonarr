@@ -22,10 +22,10 @@ All the images supports multiple architectures such as `x86-64`, `arm64` and `ar
 ### 💪 Quickstart
 To get started all you need to do is clone the repository and spin up the containers.
 ```bash
-git clone https://github.com/belarbi2733/wirehole-radarr-sonarr
+git clone https://github.com/belarbi2733/wirepius-radarr-sonarr
 ```
 ```bash
-cd wirehole-radarr-sonarr/RaSoPle
+cd wirepius-radarr-sonarr/RaSoPle
 ```
 To use all services include Telegram Bot 
 ```bash
@@ -101,7 +101,7 @@ docker-compose -f docker-compose-no-bot.yml up -d
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/belarbi2733/wirehole-radarr-sonarr/issues).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/belarbi2733/wirepius-radarr-sonarr/issues).
 
 ## 🙏 Feedback
 
