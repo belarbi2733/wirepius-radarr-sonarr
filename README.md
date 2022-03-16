@@ -113,6 +113,6 @@ If you have any feedback, please reach out to us at tking031@posteo.net
 ## :clap:  Supporters
 [![Stargazers repo roster for @belarbi2733/wirepius-radarr-sonarr](https://reporoster.com/stars/belarbi2733/wirepius-radarr-sonarr)](https://github.com/belarbi2733/wirepius-radarr-sonarr)
 
-<p align="center"><a href="https://github.com/nastyox/Rando.js#nastyox"><img src="http://randojs.com/images/barsSmallTransparentBackground.gif" alt="Animated footer bars" width="100%"/></a></p>
+<p align="center"><a href="https://github.com/belarbi2733/wirepius-radarr-sonarr#WirePiUS"><img src="http://randojs.com/images/barsSmallTransparentBackground.gif" alt="Animated footer bars" width="100%"/></a></p>
 <br/>
-<p align="center"><a href="https://github.com/nastyox/Rando.js#"><img src="http://randojs.com/images/backToTopButtonTransparentBackground.png" alt="Back to top" height="29"/></a></p>
+<p align="center"><a href="https://github.com/belarbi2733/wirepius-radarr-sonarr#"><img src="http://randojs.com/images/backToTopButtonTransparentBackground.png" alt="Back to top" height="29"/></a></p>
