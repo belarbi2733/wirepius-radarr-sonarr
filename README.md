@@ -107,10 +107,10 @@ While connected to WireGuard, navigate to http://10.2.0.100/admin
   <img src="assets/pihole.png" />
 </p>
 
-
 ## 🙏 Feedback
 
 If you have any feedback, please reach out to us at tking031@posteo.net
 
+[![Stargazers repo roster for @belarbi2733/wirepius-radarr-sonarr](https://reporoster.com/stars/belarbi2733/wirepius-radarr-sonarr)](https://github.com/belarbi2733/wirepius-radarr-sonarr)
 
 
