@@ -71,18 +71,16 @@ docker-compose -f docker-compose-no-bot.yml up -d
 
 - **Sonarr**
 1. Browse to [http://10.2.0.13:8989](http://10.2.0.13:8989).
-2. Go To Settings, click on Indexer, click on (+) Add, choose `Torznab`.
+2. Go To Settings, click on Indexer, click on (+) Add, choose `Torznab`,  fill the empty fields, click test then save.
 <p align="center">
   <img width="60%" src="../images/sonarr_indexer.gif" />
 </p>
 
-3. Click test then save.
-4. Go To Settings, click on Dowload Clients, click on (+) Add, choose `qBittorrent`
+4. Go To Settings, click on Dowload Clients, click on (+) Add, choose `qBittorrent`, fill the empty fields, click test then save.
 <p align="center">
   <img width="60%" src="../images/sonarr_download.gif" />
 </p>
 
-5. Click test then save.
 
 - **Radarr**
 1. Browse to [http://10.2.0.14:7878](http://10.2.0.14:7878).
