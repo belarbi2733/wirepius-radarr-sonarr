@@ -73,13 +73,13 @@ docker-compose -f docker-compose-no-bot.yml up -d
 1. Browse to [http://10.2.0.13:8989](http://10.2.0.13:8989).
 2. Go To Settings, click on Indexer, click on (+) Add, choose `Torznab`.
 <p align="center">
-  <img width="50%" src="../images/sonarr.png" />
+  <img width="60%" src="../images/sonarr_indexer.gif" />
 </p>
 
 3. Click test then save.
 4. Go To Settings, click on Dowload Clients, click on (+) Add, choose `qBittorrent`
 <p align="center">
-  <img width="50%" src="../images/rdclient.png" />
+  <img width="60%" src="../images/sonarr_download.gif" />
 </p>
 
 5. Click test then save.
