@@ -49,22 +49,22 @@ docker-compose -f docker-compose-no-bot.yml up -d
 1. Browse to [http://10.2.0.11:9117](http://10.2.0.11:9117).
 2. Scroll down and add in section FlareSolverr API URL: [http://10.2.0.12:8191](http://10.2.0.12:8191) as shown :
 <p align="center">
-  <img width="50%" src="../images/FlareSolverr.png" />
+  <img width="50%" src="../assets/FlareSolverr.png" />
 </p>
 
 3. Add in section `Blackhole directory` this is `/data/downloads` and apply changes by clicking on Apply server settings. You don't need to set a password as the service run over `wireguard` .
 <p align="center">
-  <img width="50%" src="../images/Jackett.png" />
+  <img width="50%" src="../assets/Jackett.png" />
 </p>
 
 4. You can add Indexer for example : `YGGtorrent`, to do this click on Add indexer->Search: YGGtorrent ->Configure->add user and password->save.
 <p align="center">
-  <img width="50%" src="../images/Jackett_Index.png" />
+  <img width="50%" src="../assets/Jackett_Index.png" />
 </p>
 
 5. You will need the API key of `Jackett`and to `copy the Torznab Feed`to used them in the next sections (**Sonarr** and **Radarr**).
 <p align="center">
-  <img width="50%" src="../images/api.png" />
+  <img width="50%" src="../assets/api.png" />
 </p>
 
 5. Click test then save.
@@ -73,12 +73,12 @@ docker-compose -f docker-compose-no-bot.yml up -d
 1. Browse to [http://10.2.0.13:8989](http://10.2.0.13:8989).
 2. Go To Settings, click on Indexer, click on (+) Add, choose `Torznab`,  fill the empty fields, click test then save.
 <p align="center">
-  <img width="60%" src="../images/sonarr_indexer.gif" />
+  <img width="60%" src="../assets/sonarr_indexer.gif" />
 </p>
 
 4. Go To Settings, click on Dowload Clients, click on (+) Add, choose `qBittorrent`, fill the empty fields, click test then save.
 <p align="center">
-  <img width="60%" src="../images/sonarr_download.gif" />
+  <img width="60%" src="../assets/sonarr_download.gif" />
 </p>
 
 
@@ -86,13 +86,13 @@ docker-compose -f docker-compose-no-bot.yml up -d
 1. Browse to [http://10.2.0.14:7878](http://10.2.0.14:7878).
 2. Go To Settings, click on Indexer, click on (+) Add, choose `Torznab`.
 <p align="center">
-  <img width="50%" src="../images/radarr.png" />
+  <img width="50%" src="../assets/radarr.png" />
 </p>
 
 3. Click test then save.
 4. Go To Settings, click on Dowload Clients, click on (+) Add, choose `qBittorrent`.
 <p align="center">
-  <img width="50%" src="../images/rdclient.png" />
+  <img width="50%" src="../assets/rdclient.png" />
 </p>
 
 - **Plex**

@@ -1,5 +1,5 @@
-## 🌉 WireHoleS
-WireHoleS is a combination of four services in one in a docker-compose project
+## 🌉 WirePiUS
+WirePiUS is a combination of four services in one in a docker-compose project
 - [WireGuard®](https://www.wireguard.com/),
 - [Pi-Hole®](https://en.wikipedia.org/wiki/Pi-hole)
 - [Unbound®](https://en.wikipedia.org/wiki/Unbound_(DNS_server))
@@ -19,16 +19,13 @@ This project supports multiple architectures such as `x86-64`, `arm64` [Raspberr
 | arm64 | arm64v8-latest |
 | armhf | arm32v7-latest |
 
-## 🌉 WireHoleS
-WireHole is a combination of [WireGuard®](https://www.wireguard.com/), [Pi-Hole®](https://en.wikipedia.org/wiki/Pi-hole), [Unbound®](https://en.wikipedia.org/wiki/Unbound_(DNS_server)), and [Stubby®](https://dnsprivacy.org/dns_privacy_daemon_-_stubby/) for secure VPN and [DoT](https://en.wikipedia.org/wiki/DNS_over_TLS) (DNS over TLS) in a docker-compose project
-
 ### 💪 Quickstart
 To get started all you need to do is clone the repository and spin up the containers.
 ```bash
 git clone https://github.com/belarbi2733/wirehole-radarr-sonarr
 ```
 ```bash
-cd wirehole-radarr-sonarr/WireHoleS
+cd wirehole-radarr-sonarr/WirePiUS
 ```
 ```bash
 docker-compose up -d
