@@ -9,7 +9,7 @@ networks:
 
 services:
   unbound:
-    image: "mvance/unbound:latest"
+    image: "amine2733/unbound:latest"
     container_name: unbound
     restart: unless-stopped
     hostname: "unbound"
