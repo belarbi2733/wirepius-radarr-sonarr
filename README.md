@@ -110,7 +110,9 @@ While connected to WireGuard, navigate to http://10.2.0.100/admin
 ## 🙏 Feedback
 
 If you have any feedback, please reach out to us at tking031@posteo.net
-## &#8627; Stargazers
+## :clap:  Supporters
 [![Stargazers repo roster for @belarbi2733/wirepius-radarr-sonarr](https://reporoster.com/stars/belarbi2733/wirepius-radarr-sonarr)](https://github.com/belarbi2733/wirepius-radarr-sonarr)
 
-
+<p align="center"><a href="https://github.com/nastyox/Rando.js#nastyox"><img src="http://randojs.com/images/barsSmallTransparentBackground.gif" alt="Animated footer bars" width="100%"/></a></p>
+<br/>
+<p align="center"><a href="https://github.com/nastyox/Rando.js#"><img src="http://randojs.com/images/backToTopButtonTransparentBackground.png" alt="Back to top" height="29"/></a></p>
