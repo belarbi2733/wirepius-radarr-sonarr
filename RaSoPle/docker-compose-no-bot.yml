@@ -83,8 +83,8 @@ services:
     restart: unless-stopped
     hostname: "plex"
     volumes:
-      - './sonarr:/tv'
-      - './radarr:/movies'
+      - './sonarr/series:/tv'
+      - './radarr/movies:/movies'
       - './plex/config:/config'
     environment:
       #- PLEX_CLAIM=
@@ -98,4 +98,4 @@ services:
 networks:
       private_network:
         external:
-          name: servicewireguard_private_network
+          name: wirepius_private_network
