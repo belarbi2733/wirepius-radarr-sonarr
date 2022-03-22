@@ -95,22 +95,6 @@ services:
     networks:
       private_network:
         ipv4_address: 10.2.0.15
-  addarr: # Telegram Bot to add movies series directly to sonnar/radarr
-    image: "waterboy1602/addarr"
-    container_name: addarr
-    restart: unless-stopped
-    hostname: "addarr"
-    volumes:
-      - ./addarr/config.yaml:/app/config.yaml:ro
-      - ./addarr/chatid.txt:/app/chatid.txt:rw
-      - ./addarr/admin.txt:/app/admin.txt:ro
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/Brussels
-    networks:
-      private_network:
-        ipv4_address: 10.2.0.16
 networks:
       private_network:
         external:

@@ -1,0 +1,24 @@
+version: "3"
+services:
+  plex:
+    image: "linuxserver/plex:latest"
+    container_name: plex
+    restart: unless-stopped
+    hostname: "plex"
+    volumes:
+      - './sonarr/series:/tv'
+      - './radarr/movies:/movies'
+      - './plex/config:/config'
+    environment:
+      #- PLEX_CLAIM=
+      - PUID=1000
+      - PGID=1000
+      - VERSION=docker
+      - TZ=Europe/Brussels
+    networks:
+      private_network:
+        ipv4_address: 10.2.0.15
+networks:
+      private_network:
+        external:
+          name: wirepius_private_network
