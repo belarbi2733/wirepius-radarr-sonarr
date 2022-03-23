@@ -13,6 +13,10 @@ services:
       driver: json-file
       options:
         max-size: 10m
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Brussels
     networks:
       private_network:
         ipv4_address: 10.2.0.10
@@ -52,7 +56,7 @@ services:
     hostname: "sonarr"
     volumes:
       - './sonarr/series:/tv'
-      - './sonarr/downloads:/downloads'
+      - './rdtclient/downloads/sonarr:/downloads/sonarr'
       - './sonarr/config:/config'
     environment:
       - PUID=1000
@@ -68,7 +72,7 @@ services:
     hostname: "radarr"
     volumes:
       - './radarr/movies:/movies'
-      - './radarr/downloads:/downloads'
+      - './rdtclient/downloads/radarr:/downloads/radarr'
       - './radarr/config:/config'
     environment:
       - PUID=1000
@@ -77,24 +81,6 @@ services:
     networks:
       private_network:
         ipv4_address: 10.2.0.14
-  plex:
-    image: "linuxserver/plex:latest"
-    container_name: plex
-    restart: unless-stopped
-    hostname: "plex"
-    volumes:
-      - './sonarr/series:/tv'
-      - './radarr/movies:/movies'
-      - './plex/config:/config'
-    environment:
-      #- PLEX_CLAIM=
-      - PUID=1000
-      - PGID=1000
-      - VERSION=docker
-      - TZ=Europe/Brussels
-    networks:
-      private_network:
-        ipv4_address: 10.2.0.15
 networks:
       private_network:
         external:

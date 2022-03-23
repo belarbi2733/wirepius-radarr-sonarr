@@ -1,0 +1,22 @@
+version: "3"
+services:
+  emby:
+    image: "lscr.io/linuxserver/jellyfin"
+    container_name: jellyfin
+    restart: unless-stopped
+    hostname: "jellyfin"
+    volumes:
+      - './sonarr/series:/data/tvshows'
+      - './radarr/movies:/data/movies'
+      - './jellyfin/config:/config'
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Brussels
+    networks:
+      private_network:
+        ipv4_address: 10.2.0.15
+networks:
+      private_network:
+        external:
+          name: wirepius_private_network
