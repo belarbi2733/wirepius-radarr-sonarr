@@ -91,7 +91,7 @@ docker-compose -f docker-compose.yml -f docker-compose-jellyfin.yml -d docker-co
  sudo crontab -e
 ````
 ```bash 
-*/2 * * * *   /home/ubuntu/wirepius-radarr-sonarr/RaSoPle/rdtclient/downloads/sonarr/
+*/2 * * * *  chmod 777 -R /home/ubuntu/wirepius-radarr-sonarr/RaSoPle/rdtclient/downloads/sonarr/
 ```
 
 - **Radarr**
