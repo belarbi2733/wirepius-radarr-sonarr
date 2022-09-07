@@ -1,6 +1,6 @@
 ## 💬 What is this?
 - **WirePiUS** is a combination of WireGuard, Pi-Hole, Unbound, and Stubby for secure VPN and DoT (DNS over TLS) in a docker-compose project
-- **RaSoPle** is a combination of Radarr, Sonarr, Lidarr, Jackett, flaresolverr, rdt-client, Plex in a one docker-compose project.
+- **RaSoPle** is a combination of Radarr, Sonarr, Lidarr, Jackett, flaresolverr, rdt-client, Plex, Emby or Jellyfin in a one docker-compose project.
 
 With the intent of enabling users to quickly and easily create and deploy a personally managed full or split-tunnel WireGuard VPN with ad blocking capabilities (via Pihole), first DNS caching with additional privacy options (via Unbound) and second DoT (DNS over TLS) within Stubby.
 
@@ -106,6 +106,10 @@ While connected to WireGuard, navigate to http://10.2.0.100/admin
 <p align="center">
   <img src="assets/pihole.png" />
 </p>
+
+## 🌉 RaSoPle
+**RaSoPle** is a combination of Radarr, Sonarr, Lidarr, Jackett, flaresolverr, rdt-client, Plex, Emby or Jellyfin in a one docker-compose project.
+
 
 ## 🙏 Feedback
 
