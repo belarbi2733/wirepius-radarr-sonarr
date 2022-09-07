@@ -28,7 +28,7 @@ git clone https://github.com/belarbi2733/wirepius-radarr-sonarr
 ```bash
 cd wirepius-radarr-sonarr/RaSoPle
 ```
-You need to choose between the media player service : Plex or Emby or Jellyfin. 
+You need to choose between the media player service : Plex, Emby or Jellyfin. 
 To start all services with Jellyfin for example :  
 ```bash
 docker-compose -f docker-compose.yml -f docker-compose-jellyfin.yml up -d
@@ -123,6 +123,19 @@ docker-compose -f docker-compose.yml -f docker-compose-jellyfin.yml -d docker-co
 - **Emby or Jellyfin**
 1. Browse to [http://10.2.0.15:8096](http://10.2.0.15:8096).
 - **Addarr**
+## COMMANDS
+These are the default commands:
+- `/help`: gives an overview of all the commands with their action
+- `/auth`: authenticate the chat to use this bot
+- `/start`: start adding a series or movie to Sonarr/Radarr
+- `/delete`: remove a series or movie from Sonarr/Radarr
+- `/movie` (en-us) - `/film` (nl-be, it-it, de-de, fr-fr) - `/file` (pt-pt) - `/Película` (es-es): start adding a movie to Radarr
+- `/series` (en-us) - `/serie` (nl-be, it-it, pt-pt, es-es, de-de, fr-fr) : start adding a series to Sonarr
+- `/allSeries`: receive a list of all the series on Sonarr
+- `/allMovies`: receive a list of all the movies on Radarr
+- `/transmission`: change the down-/upload speed of Transmission from Temporary Speed Limit to normal or the other way around
+- `/sabnzbd`: change the down-/upload speed of Sabnzbd to 25%, 50% or 100% of the defined limit.
+- `/stop`: stops the command you were executing. Can be used at any moment  
 
 ## 🤝 Contributing
 
