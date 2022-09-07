@@ -123,7 +123,7 @@ docker-compose -f docker-compose.yml -f docker-compose-jellyfin.yml -d docker-co
 - **Emby or Jellyfin**
 1. Browse to [http://10.2.0.15:8096](http://10.2.0.15:8096).
 - **Addarr**
-## COMMANDS
+1. COMMANDS
 These are the default commands:
 - `/help`: gives an overview of all the commands with their action
 - `/auth`: authenticate the chat to use this bot
